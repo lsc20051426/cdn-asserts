@@ -38,21 +38,22 @@ Quick start
     ```
     Explaination ::
     
+    ```
     {% cdn bootcss %}
-    
         {% asset jquery 2.2.1 jquery.min js %}
-        
     {% endcdn %}
+    ```
+
+
+    The last parameter for asset filter is js, It would generate ```<script src="..."></script>```
     
-    The last parameter for asset filter is js, It would generate <script>
+    If the last parameter is css, then it would be ```<link href='...' rel='stylesheet'>```
     
-    If the last parameter is css, then it would be <link rel='stylesheet'>
+    '/'.join() jquery 2.2.1 jquery.min -> ```jquery/2.2.1/jquery.min``` 
     
-    '/'.join() jquery 2.2.1 jquery.min -> jquery/2.2.1/jquery.min 
+    adding the js it becomes ```jquery/2.2.1/jquery.min.js```
     
-    adding the js it becomes jquery/2.2.1/jquery.min.js
-    
-    The host is bootcss, so the url would be //cdn.bootcss.com/jquery/2.2.1/jquery.min.js
+    The host is bootcss, so the url would be ```//cdn.bootcss.com/jquery/2.2.1/jquery.min.js```
 
 
 3. CDN Host list::
