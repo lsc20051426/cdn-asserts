@@ -8,11 +8,11 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='cdn-assets',
-    version='0.1',
+    name='cdn_assets',
+    version='0.2.3',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=['tag_parser'],
+    install_requires=['django-tag-parser'],
     license='BSD License',  # example license
     description='Using CDN Assets(mainly JS and css) instead of downloading asset by your self.',
     long_description=README,

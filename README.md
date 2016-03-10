@@ -9,13 +9,13 @@ Quick start
 
 0. Install this package:
 
-    pip install cdn-assets
+    pip install cdn_assets
 
-1. Add "cdn-assets" to your INSTALLED_APPS setting like this::
+1. Add "cdn_assets" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'cdn-assets',
+        'cdn_assets',
     ]
 
 2. Using filter we provide like this::
