@@ -8,11 +8,12 @@ Quick start
 -----------
 
 0. Install this package:
-
+    ```
     pip install cdn-assets
+    ```
 
 1. Add "cdn_assets" to your INSTALLED_APPS setting like this::
-
+    ```
     INSTALLED_APPS = [
         ...
         'cdn_assets',
