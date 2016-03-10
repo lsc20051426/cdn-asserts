@@ -9,7 +9,7 @@ Quick start
 
 0. Install this package:
 
-    pip install cdn_assets
+    pip install cdn-assets
 
 1. Add "cdn_assets" to your INSTALLED_APPS setting like this::
 
@@ -17,33 +17,47 @@ Quick start
         ...
         'cdn_assets',
     ]
+    ```
 
 2. Using filter we provide like this::
 
+    ```
     {% load cdn_assets %}
 
     {% cdn bootcss %}
         {% asset bootstrap 3.3.5 css bootstrap.min css %}
         {% asset jquery 2.2.1 jquery.min js %}
     {% endcdn %}
+    ```
 
 
     This will output ::
+    ```
     <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
+    ```
     Explaination ::
+    
+    ```
     {% cdn bootcss %}
         {% asset jquery 2.2.1 jquery.min js %}
     {% endcdn %}
-    The last parameter for asset filter is js, It would generate <script>
-    If the last parameter is css, then it would be <link rel='stylesheet'>
-    '/'.join() jquery 2.2.1 jquery.min -> jquery/2.2.1/jquery.min 
-    adding the js it becomes jquery/2.2.1/jquery.min.js
-    The host is bootcss, so the url would be //cdn.bootcss.com/jquery/2.2.1/jquery.min.js
+    ```
+
+
+    The last parameter for asset filter is js, It would generate ```<script src="..."></script>```
+    
+    If the last parameter is css, then it would be ```<link href='...' rel='stylesheet'>```
+    
+    '/'.join() jquery 2.2.1 jquery.min -> ```jquery/2.2.1/jquery.min``` 
+    
+    adding the js it becomes ```jquery/2.2.1/jquery.min.js```
+    
+    The host is bootcss, so the url would be ```//cdn.bootcss.com/jquery/2.2.1/jquery.min.js```
+
 
 3. CDN Host list::
-
+    ```
     HOST_MAPPINGS = {
         'bootcss':      'cdn.bootcss.com',
         'baidu':        'libs.baidu.com',
@@ -55,6 +69,6 @@ Quick start
         'staticfile':   'cdn.staticfile.org',
         '360':          'libs.useso.com'
     }
-
+    ```
 
 
